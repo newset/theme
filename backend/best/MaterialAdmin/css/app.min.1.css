@@ -8633,7 +8633,8 @@ button.close {
 
 @font-face {
   font-family: 'roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Thin-webfont.woff');
+  src: url('../fonts/Roboto-Thin-webfont.woff') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -8644,7 +8645,8 @@ button.close {
 
 @font-face {
   font-family: 'roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Thin-webfont.woff');
+  src: url('../fonts/Roboto-Thin-webfont.woff') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -8655,7 +8657,8 @@ button.close {
 
 @font-face {
   font-family: 'roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Thin-webfont.woff');
+  src: url('../fonts/Roboto-Thin-webfont.woff') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -8666,7 +8669,8 @@ button.close {
 
 @font-face {
   font-family: 'roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Thin-webfont.woff');
+  src: url('../fonts/Roboto-Thin-webfont.woff') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
