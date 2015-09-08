@@ -1,120 +1,222 @@
-<!DOCTYPE html>
-<html ng-app="wx">
+<html ng-app="wx" style="overflow: hidden;" class="ng-scope">
 <!--[if IE 9 ]><html class="ie9"><![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Material Admin</title>
 
-        <!-- Vendor CSS -->
-        <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
-        <link href="vendors/sweet-alert/sweet-alert.min.css" rel="stylesheet">
-        <link href="vendors/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
-            
-        <!-- CSS -->
-        <link href="css/app.min.1.css" rel="stylesheet">
-        <link href="css/app.min.2.css" rel="stylesheet">
-        <style type="text/css">
-            html,body{
-                height: 100%;
-            }
-            .color{
-                padding: 5px 10px;
-                color: white;
-            }
-            .wx-done{
-                right: 10px;
-                top: 10px;
-                border-radius: 16px;
-                padding-left: 6px;
-            }
-        </style>
-        <script type="text/javascript">
-            var _wx = {
-                'id' : '',
-                'name' : '' 
-            };
-        </script>
-    </head>
-    <body class="toggled sw-toggled">
-        <header id="header">
-            <ul class="header-inner">
-                <li id="menu-trigger" data-trigger="#sidebar">
-                    <div class="line-wrap">
-                        <div class="line top"></div>
-                        <div class="line center"></div>
-                        <div class="line bottom"></div>
-                    </div>
-                </li>
-            
-                <li class="logo hidden-xs">
-                    <a href="#/">Material Admin</a>
-                </li>
-                
-                <li class="pull-right">
-                    <ul class="top-menu">
-                        <li id="toggle-width">
-                            <div class="toggle-switch">
-                                <input id="tw-switch" type="checkbox" hidden="hidden">
-                                <label for="tw-switch" class="ts-helper"></label>
+<head>
+    <style type="text/css">
+    .ng-animate.item:not(.left):not(.right) {
+        -webkit-transition: 0s ease-in-out left;
+        transition: 0s ease-in-out left;
+    }
+    @charset "UTF-8";
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide:not(.ng-hide-animate) {
+        display: none !important;
+    }
+    
+    ng\:form {
+        display: block;
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Admin</title>
+    <!-- Vendor CSS -->
+    <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
+    <link href="vendors/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+    <link href="vendors/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+    
+    .color {
+        padding: 5px 10px;
+        color: white;
+    }
+    
+    .wx-done {
+        right: 10px;
+        top: 10px;
+        border-radius: 16px;
+        padding-left: 6px;
+    }
+    </style>
+    <script type="text/javascript">
+    var _wx = {
+        'id': '',
+        'name': ''
+    };
+    </script>
+</head>
+
+<body class="toggled sw-toggled">
+    <header id="header">
+        <ul class="header-inner">
+            <li id="menu-trigger" data-trigger="#sidebar">
+                <div class="line-wrap">
+                    <div class="line top"></div>
+                    <div class="line center"></div>
+                    <div class="line bottom"></div>
+                </div>
+            </li>
+            <li class="logo hidden-xs">
+                <a href="#/">Material Admin</a>
+            </li>
+            <li class="pull-right">
+                <ul class="top-menu">
+                    <li id="toggle-width">
+                        <div class="toggle-switch">
+                            <input id="tw-switch" type="checkbox" hidden="hidden">
+                            <label for="tw-switch" class="ts-helper"></label>
+                        </div>
+                    </li>
+                    <li id="top-search">
+                        <a class="tm-search" href=""></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Top Search Content -->
+        <div id="top-search-wrap">
+            <input type="text">
+            <i id="top-search-close">×</i>
+        </div>
+    </header>
+    <section id="main">
+        <aside id="sidebar">
+            <div class="sidebar-inner">
+                <div class="si-inner">
+                    <div class="profile-menu">
+                        <a href="">
+                            <div class="profile-pic">
+                                <img src="img/profile-pics/1.jpg" alt="">
                             </div>
-                        </li>
-                        <li id="top-search">
-                            <a class="tm-search" href=""></a>
-                        </li>
+                            <div class="profile-info">
+                                Malinda Hollaway
+                                <i class="md md-arrow-drop-down"></i>
+                            </div>
+                        </a>
+                        <ul class="main-menu">
+                            <li>
+                                <a href="auth/logout"><i class="md md-history"></i>退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="main-menu">
+                        <li ng-class="{'active' : $state.includes('home')}" class=""><a ui-sref="home" href="#/"><i class="md md-home"></i>首页</a></li>
+                        <li ng-class="{'active' : $state.includes('articles')}"><a ui-sref="articles" href="#/articles/"><i class="md md-format-underline"></i>文章</a></li>
+                        <li ng-class="{'active' : $state.includes('weixins')}" class="active"><a ui-sref="weixins.index" href="#/weixins/"><i class="md md-today"></i>公众号</a></li>
+                        <li ng-class="{'active' : $state.includes('tags')}" ng-show="currentLoginUser.admin" class=""><a ui-sref="tags" href="#/tags/"><i class="md md-timer"></i>标签</a></li>
                     </ul>
-                </li>
-            </ul>
-            
-            <!-- Top Search Content -->
-            <div id="top-search-wrap">
-                <input type="text">
-                <i id="top-search-close">&times;</i>
+                </div>
             </div>
-        </header>
-        
-        <section id="main">
-            <aside id="sidebar">
-                <div class="sidebar-inner">
-                    <div class="si-inner">
-                        <div class="profile-menu">
-                            <a href="">
-                                <div class="profile-pic">
-                                    <img src="img/profile-pics/1.jpg" alt="">
-                                </div>
-                                
-                                <div class="profile-info">
-                                    Malinda Hollaway
-                                    
-                                    <i class="md md-arrow-drop-down"></i>
-                                </div>
-                            </a>
-                            
-                            <ul class="main-menu">
-                                <li>
-                                    <a href="auth/logout"><i class="md md-history"></i>退出</a>
+        </aside>
+        <section id="content">
+            <!-- uiView:  -->
+            <div class="container ng-scope" ui-view="">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <div class="card ng-scope">
+                        <div class="card-header">
+                            <h2 class="ng-binding">CNET</h2>
+                            <ul class="actions">
+                                <li class="">
+                                    <a ui-sref="weixins.index" data-clear="notification" href="#/weixins/">
+                                        <i class="md md-navigate-before"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
-                        
-                        <ul class="main-menu">
-                            <li ng-class="{'active' : $state.includes('home')}"><a ui-sref="home"><i class="md md-home"></i>首页</a></li>
-                            <li ng-class="{'active' : $state.includes('articles')}"><a ui-sref="articles"><i class="md md-format-underline"></i>文章</a></li>
-                            <li ng-class="{'active' : $state.includes('weixins')}"><a ui-sref="weixins.index"><i class="md md-today"></i>公众号</a></li>
-                            <li ng-class="{'active' : $state.includes('tags')}" ng-show="currentLoginUser.admin" class="ng-hide"><a ui-sref="tags"><i class="md md-timer"></i>标签</a></li>
-                        </ul>
+                        <div class="card-body card-padding">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <a href="#">
+                                                <img class="media-object" ng-src="img/profile-pics/6.jpg" alt="" src="img/profile-pics/6.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading ng-binding">CNET</h4>
+                                            <p ng-bind-html="weixin.intro" class="ng-binding">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <h4>选择分类</h4>
+                                    <hr>
+                                    <div class="t-view p-20">
+                                        <!-- ngRepeat: tag in tagMarked -->
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-block" ng-click="confirm()">确认选择并显示下一个</button>
+                                    <div class="m-t-20 p-t-10 p-b-10">
+                                        <!-- ngRepeat: cate in cates -->
+                                        <div ng-repeat="cate in cates" class="ng-scope">
+                                            <h4 class="m-t-20 ng-binding">金融</h4>
+                                            <hr>
+                                            <div class="m-l-10">
+                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">股票</span>
+                                                <!-- end ngRepeat: tag in cate.tags -->
+                                                <span class="clearfix"></span>
+                                            </div>
+                                        </div>
+                                        <!-- end ngRepeat: cate in cates -->
+                                        <div ng-repeat="cate in cates" class="ng-scope">
+                                            <h4 class="m-t-20 ng-binding">生活</h4>
+                                            <hr>
+                                            <div class="m-l-10">
+                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-purple m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">美食</span>
+                                                <!-- end ngRepeat: tag in cate.tags --><span class="color bgm-purple m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">购物</span>
+                                                <!-- end ngRepeat: tag in cate.tags -->
+                                                <span class="clearfix"></span>
+                                            </div>
+                                        </div>
+                                        <!-- end ngRepeat: cate in cates -->
+                                        <div ng-repeat="cate in cates" class="ng-scope">
+                                            <h4 class="m-t-20 ng-binding">美食</h4>
+                                            <hr>
+                                            <div class="m-l-10">
+                                                <!-- ngRepeat: tag in cate.tags -->
+                                                <span class="clearfix"></span>
+                                            </div>
+                                        </div>
+                                        <!-- end ngRepeat: cate in cates -->
+                                        <div ng-repeat="cate in cates" class="ng-scope">
+                                            <h4 class="m-t-20 ng-binding">理财</h4>
+                                            <hr>
+                                            <div class="m-l-10">
+                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-pink m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">债券</span>
+                                                <!-- end ngRepeat: tag in cate.tags -->
+                                                <span class="clearfix"></span>
+                                            </div>
+                                        </div>
+                                        <!-- end ngRepeat: cate in cates -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h4>最近文章</h4>
+                                    <hr>
+                                    <!-- ngRepeat: article in weixin.articles -->
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </aside>
-            <section id="content">
-                <div class="container" ui-view></div>
-            </section>
+            </div>
         </section>
-        
-        <!-- Older IE warning message -->
-        <!--[if lt IE 9]>
+    </section>
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
             <div class="ie-warning">
                 <h1 class="c-white">IE SUCKS!</h1>
                 <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser <br/>in order to access the maximum functionality of this website. </p>
@@ -153,33 +255,34 @@
                 <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
             </div>   
         <![endif]-->
-        <script type="text/javascript">
-            window.baseUrl = 'http://localhost/wx/public';
-        </script>
+    <script type="text/javascript">
+    window.baseUrl = 'http://localhost/wx/public';
+    </script>
+    <!-- Javascript Libraries -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/auto-size/jquery.autosize.min.js"></script>
+    <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="vendors/waves/waves.min.js"></script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/sweet-alert/sweet-alert.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="http://localhost/wx/public/vendors/angular/angular.js"></script>
+    <script src="http://localhost/wx/public/vendors/angular-cookies/angular-cookies.js"></script>
+    <script src="http://localhost/wx/public/vendors/angular-sanitize/angular-sanitize.js"></script>
+    <script src="http://localhost/wx/public/vendors/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="http://localhost/wx/public/vendors/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="http://localhost/wx/public/vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="http://cdn.bootcss.com/angular-ui-bootstrap/0.13.3/ui-bootstrap-tpls.js"></script>
+    <script src="http://localhost/wx/public/app/app.js"></script>
+    <script src="http://localhost/wx/public/app/main.js"></script>
+    <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 5px; z-index: auto; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; display: block; opacity: 0;">
+        <div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 5px; height: 559px; border: 0px; border-radius: 0px; background-color: rgba(0, 0, 0, 0.298039); background-clip: padding-box;"></div>
+    </div>
+    <div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 5px; z-index: auto; position: fixed; left: 0px; width: 100%; bottom: 0px; cursor: default; display: none; opacity: 0;">
+        <div class="nicescroll-cursors" style="position: absolute; top: 0px; height: 5px; width: 400px; border: 0px; border-radius: 0px; background-color: rgba(0, 0, 0, 0.298039); background-clip: padding-box;"></div>
+    </div>
+</body>
 
-        <!-- Javascript Libraries -->
-        <script src="js/jquery-2.1.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        
-        <script src="vendors/auto-size/jquery.autosize.min.js"></script>
-        <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
-        <script src="vendors/waves/waves.min.js"></script>
-        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
-        <script src="vendors/sweet-alert/sweet-alert.min.js"></script>
-        
-        <script src="js/functions.js"></script>
-        <script src="js/demo.js"></script>
-
-        <script src="vendors/angular/angular.js"></script>
-        <script src="vendors/angular-cookies/angular-cookies.js"></script>
-        <script src="vendors/angular-sanitize/angular-sanitize.js"></script>
-        <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="vendors/angular-bootstrap/ui-bootstrap.js"></script>
-        <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        
-        <script src="http://cdn.bootcss.com/angular-ui-bootstrap/0.13.3/ui-bootstrap-tpls.js"></script>
-
-        <script src="app/app.js"></script>
-        <script src="app/main.js"></script>
-    </body>
-  </html>
+</html>
