@@ -144,85 +144,110 @@
                         <div class="card-body card-padding">
 
                             <div class="row">
-
                                 <div class="col-md-6 col-sm-12">
                                     <div class="media">
                                         <div class="pull-left">
                                             <a href="#">
-                                                <img class="media-object" ng-src="img/profile-pics/6.jpg" alt="" src="img/profile-pics/6.jpg">
+                                                <img class="media-object" ng-src="img/profile-pics/4.jpg" alt="" src="img/profile-pics/4.jpg">
                                             </a>
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="media-heading ng-binding">CNET</h4>
-                                            <p ng-bind-html="weixin.intro" class="ng-binding">&nbsp;</p>
+                                            <h4 class="media-heading ng-binding">汽车潮生活</h4> <p ng-bind-html="weixin.intro" class="ng-binding">羡慕冠希哥，泡妞开豪车，要是纯爷们，关注潮生活。是不是纯爷们，你说啊，你说啊！</p>
                                         </div>
                                     </div>
                                     <h4>选择分类</h4>
                                     <hr>
                                     <div class="t-view p-20">
                                         <!-- ngRepeat: tag in tagMarked -->
-                                    </div>
-                                    <button type="button" class="btn btn-primary btn-block" ng-click="confirm()">确认选择并显示下一个</button>
-                                    <div class="m-t-20 p-t-10 p-b-10">
-                                        <!-- ngRepeat: cate in cates -->
-                                        <div ng-repeat="cate in cates" class="ng-scope">
+                    				</div>
+                    				<button type="button" class="btn btn-primary btn-block" ng-click="confirm()">确认选择并显示下一个</button>
+                    
+                    				<div class="m-t-20 p-t-10 p-b-10">
+                    					<!-- ngRepeat: cate in cates --><div ng-repeat="cate in cates" class="ng-scope">
+                                            <h4 class="m-t-20 ng-binding">其他</h4>
+                                            <hr>
+                                            <div class="m-l-10">
+                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">情感</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">星座语录</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">成功励志</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">女人时尚</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">搞笑幽默</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">时事政治</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">运动健身</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">旅游户外</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">游戏</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">动漫</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">养生健康</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">餐饮美食</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">娱乐影音</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">母婴</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">早教</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">儿童</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">名人大V</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">股票</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">基金</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">p2P</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">众筹</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">金融财经</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">人力资源</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">新闻资讯</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">互联网</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">智能硬件</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">科学前沿</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">文化历史</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">电子商务</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">创业</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">职场</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">教育培训</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">美容服装</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">汽车</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">家居</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">房产</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">官方媒体</span><!-- end ngRepeat: tag in cate.tags -->
+                                                <span class="clearfix"></span>
+                                            </div>
+                                        </div><!-- end ngRepeat: cate in cates --><div ng-repeat="cate in cates" class="ng-scope">
                                             <h4 class="m-t-20 ng-binding">金融</h4>
                                             <hr>
                                             <div class="m-l-10">
-                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-red m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">股票</span>
-                                                <!-- end ngRepeat: tag in cate.tags -->
+                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-pink m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">私募</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-pink m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">信托</span><!-- end ngRepeat: tag in cate.tags --><span class="color bgm-pink m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">理财</span><!-- end ngRepeat: tag in cate.tags -->
                                                 <span class="clearfix"></span>
                                             </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <!-- end ngRepeat: cate in cates -->
-                                        <div ng-repeat="cate in cates" class="ng-scope">
-                                            <h4 class="m-t-20 ng-binding">生活</h4>
-                                            <hr>
-                                            <div class="m-l-10">
-                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-purple m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">美食</span>
-                                                <!-- end ngRepeat: tag in cate.tags --><span class="color bgm-purple m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">购物</span>
-                                                <!-- end ngRepeat: tag in cate.tags -->
-                                                <span class="clearfix"></span>
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                        </div>
-                                        <!-- end ngRepeat: cate in cates -->
-                                        <div ng-repeat="cate in cates" class="ng-scope">
-                                            <h4 class="m-t-20 ng-binding">美食</h4>
-                                            <hr>
-                                            <div class="m-l-10">
-                                                <!-- ngRepeat: tag in cate.tags -->
-                                                <span class="clearfix"></span>
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                        </div>
-                                        <!-- end ngRepeat: cate in cates -->
-                                        <div ng-repeat="cate in cates" class="ng-scope">
-                                            <h4 class="m-t-20 ng-binding">理财</h4>
-                                            <hr>
-                                            <div class="m-l-10">
-                                                <!-- ngRepeat: tag in cate.tags --><span class="color bgm-pink m-r-10 m-b-10 pull-left" ng-click="mark(tag)" ng-repeat="tag in cate.tags">债券</span>
-                                                <!-- end ngRepeat: tag in cate.tags -->
-                                                <span class="clearfix"></span>
-                                            </div>
-                                            <div class="clearfix"></div>
-
-                                        </div>
-                                        <!-- end ngRepeat: cate in cates -->
-                                    </div>
-                                     <div class="clearfix"></div>
+                                        </div><!-- end ngRepeat: cate in cates -->
+                                        <div class="clearfix"></div>
+                    				</div>
+                                    <div class="clearfix"></div>
                                 </div>
-
                                 <div class="col-md-6 col-sm-12">
-                                    <h4>最近文章</h4>
-                                    <hr>
-                                    <!-- ngRepeat: article in weixin.articles -->
-                                     <div class="clearfix"></div>
+                                	<h4>最近文章</h4>
+                                	<hr>
+                                	<!-- ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=208039354&amp;idx=1&amp;sn=54709140e124839fd12ade5d9ee4c785&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=208039354&amp;idx=1&amp;sn=54709140e124839fd12ade5d9ee4c785&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">女司机上坡溜车撞后车，竟然...</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-31 18:01:32</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=208013703&amp;idx=1&amp;sn=7f92028294be5e503dd952c83fb9025b&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=208013703&amp;idx=1&amp;sn=7f92028294be5e503dd952c83fb9025b&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">德系、日系、美系到底谁更牛？跑跑山路便知</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-28 18:57:40</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=208000374&amp;idx=1&amp;sn=6f4d9e8bec09bddb47709ef1f3ce810b&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=208000374&amp;idx=1&amp;sn=6f4d9e8bec09bddb47709ef1f3ce810b&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">奇葩：交警竟然不敌卡车司机...</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-27 18:07:59</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207992181&amp;idx=1&amp;sn=a6fe06c37e7b25d9256114f514fe69ed&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207992181&amp;idx=1&amp;sn=a6fe06c37e7b25d9256114f514fe69ed&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">宝马X6遇到唠叨交警，你还能嘚瑟的起来？</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-26 18:44:43</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207983237&amp;idx=1&amp;sn=24e1999cc8494a941c8714b6808a90c2&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207983237&amp;idx=1&amp;sn=24e1999cc8494a941c8714b6808a90c2&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">2015全球十大豪车排行&nbsp;兰博基尼倒数第一！那么第一是？</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-25 17:58:17</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207973361&amp;idx=1&amp;sn=391585a593b7609ce336d870da4ca4ae&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207973361&amp;idx=1&amp;sn=391585a593b7609ce336d870da4ca4ae&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">屌爆了的车技，副驾驶的内心一定是崩溃的</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-24 18:09:22</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207954341&amp;idx=1&amp;sn=cd112f6dee13766c36af49740a60555d&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207954341&amp;idx=1&amp;sn=cd112f6dee13766c36af49740a60555d&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">2015法兰克福车展前瞻，细数最有可能“惊艳全场”的17款车</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-21 17:59:59</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207944856&amp;idx=1&amp;sn=ef20b7269f7afa6acbb7c2479193d9b4&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207944856&amp;idx=1&amp;sn=ef20b7269f7afa6acbb7c2479193d9b4&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">开车的遇见骑车的三字秘诀：躲远点！</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-20 17:58:04</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207938391&amp;idx=1&amp;sn=d0917b7c57170b2f908379547bce5c1d&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207938391&amp;idx=1&amp;sn=d0917b7c57170b2f908379547bce5c1d&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">原来汽车也可以玩后空翻！这不科学！！！</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-19 18:14:50</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles --><div class="media ng-scope" ng-repeat="article in weixin.articles">
+                                        <div class="media-body">
+                                            <a ng-href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207929173&amp;idx=1&amp;sn=70fec87500a79694757898e09ec3f306&amp;scene=4#wechat_redirect" target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzA5MDEzNjYxOQ==&amp;mid=207929173&amp;idx=1&amp;sn=70fec87500a79694757898e09ec3f306&amp;scene=4#wechat_redirect"><h4 class="media-heading ng-binding">有一种司机叫做新手女司机......不敢惹啊！</h4></a>
+                                            <p ng-bind-html="article.shortContent168" class="ng-binding"></p>
+                                            <p class="ng-binding">发布时间: 2015-08-18 17:34:37</p>
+                                        </div>
+                                    </div><!-- end ngRepeat: article in weixin.articles -->
+                                    <div class="clearfix"></div>
                                 </div>
-
                                 <div class="clearfix"></div>
                             </div>
                         </div>
